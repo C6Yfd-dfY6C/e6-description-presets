@@ -25,7 +25,7 @@ This entire GitHub readme description and any release notes are manually written
 
 ## Preview
 
-[Screencast_20261102_072104.webm](https://github.com/user-attachments/assets/6ab67f59-7405-468a-bbf9-2d339a7cb98e)
+[Screencast_20261102_081859.webm](https://github.com/user-attachments/assets/6a061a03-668f-4ca0-872d-acf7ed7f7cfe)
 
 ## re621/re6AI Compatibility
 
