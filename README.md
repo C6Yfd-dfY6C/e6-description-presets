@@ -2,6 +2,10 @@
 
 This userscript allows a user to set up custom presets for descriptions on e621 and e6AI that they can quickly access to fill or add to the description of a post. No more copy-pasting from old posts or a file you have lying around!
 
+## Requirements
+
+Like other userscripts, you must have a userscript extension installed in your browser such as [Tampermonkey](https://www.tampermonkey.net/#google_vignette), [Violentmonkey](https://violentmonkey.github.io/), or otherwise. Install one of those first before pressing the install link below.
+
 ### [Install the latest release](https://github.com//C6Yfd-dfY6C/e6-description-presets/releases/latest/download/e6-description-presets.user.js)
 
 ## ✨ AI DISCLOSURE ✨
