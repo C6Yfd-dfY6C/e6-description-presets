@@ -27,11 +27,11 @@
    *
    *  These are only used on the very first run. From then on, presets are
    *  stored in localStorage and can be edited from the panel — no need to
-   *  edit this file. Max 10 presets, min 1 preset.
+   *  edit this file. Max 99 presets, min 1 preset.
    *
    *  Each preset: { name: "button label", text: "text to fill in" }
    * ====================================================================== */
-  const MAX_PRESETS = 10;
+  const MAX_PRESETS = 99;
   const MIN_PRESETS = 1;
 
   const DEFAULT_PRESETS = [
@@ -138,6 +138,15 @@
         flex: 0 0 auto; gap: 6px;
       }
       #e6dp-title-text { flex: 1 1 auto; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+      #e6dp-count { text-decoration: underline; cursor: pointer; }
+      #e6dp-count-input {
+        width: 4.5em; background: #1f2937; color: #f9fafb;
+        border: 1px solid #374151; border-radius: 4px; padding: 0 4px;
+        font-size: 12px; font-family: inherit; text-align: center;
+        -moz-appearance: textfield;
+      }
+      #e6dp-count-input::-webkit-outer-spin-button,
+      #e6dp-count-input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
       .e6dp-title-btn {
         width: 22px; height: 22px; border-radius: 4px; border: none; cursor: pointer;
         font-size: 15px; font-weight: bold; display: inline-flex; align-items: center; justify-content: center;
@@ -345,8 +354,15 @@
     makeChipButtons().forEach((b) => chipGroup.appendChild(b));
   }
 
+  // Only show the preset chips on post pages: /uploads/new or /posts/<number>
+  function isPostPage() {
+    return /^\/uploads\/new$/.test(location.pathname) ||
+           /^\/posts\/\d+$/.test(location.pathname);
+  }
+
   function syncChips() {
     if (!chipGroup) return;
+    if (!isPostPage()) { if (chipGroup.isConnected) chipGroup.remove(); return; }
     const field = findDescriptionField();
     if (!field) { if (chipGroup.isConnected) chipGroup.remove(); return; }
     const host = field.closest('.dtext-formatter') || field.parentElement;
@@ -434,6 +450,11 @@
     panel.querySelector('#e6dp-plus').addEventListener('click', () => addRowToEditor());
     panel.querySelector('#e6dp-close').addEventListener('click', () => {
       panel.classList.remove('open');
+    });
+
+    // Clicking the underlined count in the title bar lets the user type a new preset count.
+    panel.querySelector('#e6dp-title-text').addEventListener('click', (e) => {
+      if (e.target && e.target.id === 'e6dp-count') startCountEdit();
     });
 
     trigger.addEventListener('click', (e) => {
@@ -651,10 +672,47 @@
 
   function syncTitleBar() {
     const count = editView.querySelectorAll('.e6dp-row').length;
-    panel.querySelector('#e6dp-title-text').textContent =
-      `Description presets (${count}/${MAX_PRESETS})`;
+    panel.querySelector('#e6dp-title-text').innerHTML =
+      `Description presets (<span id="e6dp-count" title="Click to set the number of presets">${count}</span>/${MAX_PRESETS})`;
     panel.querySelector('#e6dp-minus').disabled = count <= MIN_PRESETS;
     panel.querySelector('#e6dp-plus').disabled = count >= MAX_PRESETS;
+  }
+
+  function startCountEdit() {
+    const titleText = panel.querySelector('#e6dp-title-text');
+    if (titleText.querySelector('#e6dp-count-input')) return; // already editing
+    const count = editView.querySelectorAll('.e6dp-row').length;
+    const input = document.createElement('input');
+    input.type = 'number';
+    input.id = 'e6dp-count-input';
+    input.min = MIN_PRESETS;
+    input.max = MAX_PRESETS;
+    input.value = count;
+    titleText.querySelector('#e6dp-count').replaceWith(input);
+    input.focus();
+    input.select();
+
+    let done = false;
+    const finish = (commit) => {
+      if (done) return;
+      done = true;
+      if (commit) {
+        const v = parseInt(input.value, 10);
+        if (!Number.isNaN(v)) setRowCount(Math.min(MAX_PRESETS, Math.max(MIN_PRESETS, v)));
+      }
+      syncTitleBar(); // restore the underlined number
+    };
+    input.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') { e.preventDefault(); finish(true); }
+      else if (e.key === 'Escape') { e.preventDefault(); finish(false); }
+    });
+    // Clicking / tabbing away commits the typed number.
+    input.addEventListener('blur', () => finish(true));
+  }
+
+  function setRowCount(n) {
+    while (editView.querySelectorAll('.e6dp-row').length < n) addRowToEditor();
+    while (editView.querySelectorAll('.e6dp-row').length > n) removeLastRow();
   }
 
   function commitEditor() {
