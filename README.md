@@ -6,7 +6,7 @@ This userscript allows a user to set up custom presets for descriptions on e621 
 
 Like other userscripts, you must have a userscript extension installed in your browser such as [Tampermonkey](https://www.tampermonkey.net/#google_vignette), [Violentmonkey](https://violentmonkey.github.io/), or otherwise. Install one of those first before pressing the install link below.
 
-### [Install the latest release](https://github.com//C6Yfd-dfY6C/e6-description-presets/releases/latest/download/e6-description-presets.user.js)
+### [➡️Install the latest release⬅️](https://github.com//C6Yfd-dfY6C/e6-description-presets/releases/latest/download/e6-description-presets.user.js)
 
 ## ✨ AI DISCLOSURE ✨
 This userscript was 100% vibe-coded with Qwen 3.8 27B in a locally-running instance on my own PC. **I am not a programmer**. It may not sound like it considering what I've done here, but I very highly respect manual work done by real software programmers/engineers and I would never think myself above them just because of the tools I have used here.
@@ -15,7 +15,7 @@ This entire GitHub readme description and any release notes are manually written
 
 ## Features
 
-* New nav icon on the top right near your profile picture/button to set up quick description presets for both e621 and e6AI (configurations are kept separate for each site)
+* New nav icon on the top right near your profile picture/button to set up quick description presets for e621 and e6AI (configurations are kept separate for each site; saved presets are reflected depending on which site you are on)
 * Up to 99 presets can be added or removed by pressing the plus/minus buttons or by typing in the desired number through manual input by clicking the underlined number at the top
 * Add a label/title to each preset as a note to remind yourself which one is which. This is what the button will be labelled at the description box
 * Left click the preset buttons under the description text box to fill/replace the entire description with the one in the preset
