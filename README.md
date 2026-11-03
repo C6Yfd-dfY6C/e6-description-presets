@@ -16,20 +16,21 @@ This entire GitHub readme description and any release notes are manually written
 ## Features
 
 * New nav icon on the top right near your profile picture/button to set up quick description presets for both e621 and e6AI (configurations are kept separate for each site)
-* Up to 10 presets. Add a label/title to each preset as a note to remind yourself which one is which 
-* Left click the preset box under the description entry to fill/replace the entire description with the one in the preset
+* Up to 99 presets can be added or removed by pressing the plus/minus buttons or by typing in the desired number through manual input by clicking the underlined number at the top
+* Add a label/title to each preset as a note to remind yourself which one is which. This is what the button will be labelled at the description box
+* Left click the preset buttons under the description text box to fill/replace the entire description with the one in the preset
 * Shift + Left clicking the preset _adds_ to the description rather than replacing it
 * Works on both the upload page and a post's editing page
 * Importing and exporting functionality to manage your configurations across browsers, devices, etc. The script automatically saves when importing
 * Optional dark mode preset buttons (mostly a personal thing)
 
-## Preview
+## Preview (1.0)
 
 [Screencast_20261102_081859.webm](https://github.com/user-attachments/assets/6a061a03-668f-4ca0-872d-acf7ed7f7cfe)
 
 ## re621/re6AI Compatibility
 
-In my testing, I was able to use this script just fine alongside re621 and re6AI without anything seemingly conflicting.
+In my testing, I was able to use this script just fine alongside re621 and re6AI without anything seemingly conflicting at the moment.
 
 <img width="361" height="104" alt="Screenshot_20261102_072317" src="https://github.com/user-attachments/assets/49b6c579-d105-4f0b-ae1e-83f54cac6d70" />
 
