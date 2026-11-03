@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         e6* Description Presets
 // @namespace    https://github.com/C6Yfd-dfY6C/e6-description-presets
-// @version      1.0
+// @version      1.1
 // @description  Add your own custom preset description text easily to posts on e621 and e6AI.
 // @author       C6Yfd-dfY6C, Qwen 3.8 27B
 // @homepageURL  https://github.com/C6Yfd-dfY6C/e6-description-presets
@@ -20,7 +20,7 @@
   'use strict';
 
   // Keep in sync with @version above.
-  const SCRIPT_VERSION = '1.0';
+  const SCRIPT_VERSION = '1.1';
 
   /* ======================================================================
    *  DEFAULT PRESETS (seed values)
