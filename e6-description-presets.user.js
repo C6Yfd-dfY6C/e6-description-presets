@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         e6* Description Presets
 // @namespace    https://github.com/C6Yfd-dfY6C/e6-description-presets
-// @version      1.1
-// @description  Add your own custom preset description text easily to posts on e621 and e6AI.
+// @version      1.1.1
+// @description  Add your own custom preset description text easily to posts on e621, e6AI, and Blep.
 // @author       C6Yfd-dfY6C, Qwen 3.8 27B
 // @homepageURL  https://github.com/C6Yfd-dfY6C/e6-description-presets
 // @updateURL    https://github.com/C6Yfd-dfY6C/e6-description-presets/releases/latest/download/e6-description-presets.user.js
@@ -11,6 +11,8 @@
 // @match        *://www.e6ai.net/*
 // @match        *://e621.net/*
 // @match        *://www.e621.net/*
+// @match        *://blep.art/*
+// @match        *://www.blep.art/*
 // @run-at       document-idle
 // @grant        none
 // @noframes
@@ -20,7 +22,7 @@
   'use strict';
 
   // Keep in sync with @version above.
-  const SCRIPT_VERSION = '1.1';
+  const SCRIPT_VERSION = '1.1.1';
 
   /* ======================================================================
    *  DEFAULT PRESETS (seed values)
