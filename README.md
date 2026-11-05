@@ -1,6 +1,6 @@
 # e6* Description Presets
 
-This userscript allows a user to set up custom presets for descriptions on e621 and e6AI that they can quickly access to fill or add to the description of a post. No more copy-pasting from old posts or a file you have lying around!
+This userscript allows a user to set up custom presets for descriptions on e621, e6AI, and Blep.art that they can quickly access to fill or add to the description of a post. No more copy-pasting from old posts or a file you have lying around!
 
 ## Requirements
 
@@ -15,7 +15,7 @@ This entire GitHub readme description and any release notes are manually written
 
 ## Features
 
-* New nav icon on the top right near your profile picture/button to set up quick description presets for e621 and e6AI (configurations are kept separate for each site; saved presets are reflected depending on which site you are on)
+* New nav icon on the top right near your profile picture/button to set up quick description presets for e621, e6AI, and Blep.art (configurations are kept separate for each site; saved presets are reflected depending on which site you are on)
 * Up to 99 presets can be added or removed by pressing the plus/minus buttons or by typing in the desired number through manual input by clicking the underlined number at the top
 * Add a label/title to each preset as a note to remind yourself which one is which. This is what the button will be labelled at the description box
 * Left click the preset buttons under the description text box to fill/replace the entire description with the one in the preset
