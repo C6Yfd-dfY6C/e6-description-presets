@@ -9,7 +9,7 @@ Like other userscripts, you must have a userscript extension installed in your b
 ### [➡️Install the latest release⬅️](https://github.com//C6Yfd-dfY6C/e6-description-presets/releases/latest/download/e6-description-presets.user.js)
 
 ## ✨ AI DISCLOSURE ✨
-This userscript was 100% vibe-coded with Qwen 3.8 27B in a locally-running instance on my own PC. **I am not a programmer**. It may not sound like it considering what I've done here, but I very highly respect manual work done by real software programmers/engineers and I would never think myself above them just because of the tools I have used here.
+This userscript was 100% vibe-coded with Qwen 3.8 27B in a locally-running instance on my own PC. **I am not a programmer**. It may not sound like it considering what I've done here, but I very highly respect manual work done by real software programmers/engineers and I would never think myself above them just because of the tools I have used here. I know what using AI means to some people, I get that. I understand, and I'm sorry. I never meant to harm anybody with this, and I only meant to help someone who had a specific need and I tried helping with the only way I knew how. With this in mind, you know to avoid this if this is not to your liking.
 
 This entire GitHub readme description and any release notes are manually written by me, for whatever that's worth.
 
